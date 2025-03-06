@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #fefefe;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 80px;
+  display: flex;
+  overflow-x: hidden;
+  flex-direction: column;
+  background-color: rgba(76, 198, 241, 0.6); ;
+  color:#ffff;
+  padding: 25px 20px;
+  transition: all 0.4s ease;
+  position: fixed;
+  z-index: 1000;
+}
+
+.sidebar:hover {
+  width: 280px;
+  background-color:#00c3ff;
+}
+
+.sidebar .sidebar-header {
+  display: flex;
+}
+.sidebar .sidebar-header img {
+  width: 42px;
+}
+.sidebar .sidebar-header h2 {
+  color: #000000;
+  font-size: 1.25rem;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-left: 23px;
+}
+.sidebar-links h4 {
+  color: #000000;
+  font-weight: 500;
+  white-space: nowrap;
+  margin: 10px 0;
+  position: relative;
+}
+.sidebar-links h4 span {
+  opacity: 0;
+}
+.sidebar:hover .sidebar-links h4 span {
+  opacity: 1;
+}
+.sidebar-links .menu-separator {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(1);
+  transform: translateY(-50%);
+  background: #0a11e3;
+  transform-origin: right;
+  transition-delay: 0.2s;
+}
+.sidebar:hover .sidebar-links .menu-separator {
+  transition-delay: 0s;
+  transform: scaleX(0);
+}
+.sidebar-links {
+  list-style: none;
+  margin-top: 20px;
+  height: 80%;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.sidebar-links::-webkit-scrollbar {
+  display: none;
+}
+.sidebar-links li a {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+  color: #000000;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 15px 10px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+.sidebar-links li a:hover {
+  color: #000000;
+  background: #2abc02;
+  border-radius: 4px;
+  padding: 15px 15px;
+}
+
+.user-account {
+  margin-top: auto;
+  padding: 12px 10px;
+  margin-left: -10px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.user-profile img {
+  width: 42px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+}
+
+.user-profile h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.user-profile span {
+  font-size: 0.775rem;
+  font-weight: 600;
+}
+
+.user-detail {
+  margin-left: 23px;
+  white-space: nowrap;
+}
+
+.sidebar:hover .user-account {
+  background: #000000;
+  border-radius: 4px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.main-content h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+.main-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Dashboard Header */
+.dashboard-grid {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+}
+.dashboard-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.dashboard-card p {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 15px 0;
+  color: #555;
+}
+
+.dashboard-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #c4ff6d; /* Button background color */
+  color: #000000; /* Button text color */
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-card a:hover {
+  background-color: #b3f15f; /* Darker on hover */
+}
+
+.main-content {
+  margin-left: 80px; /* Same as sidebar width */
+  padding: 20px;
+  flex-grow: 1;
+  background-color: #f5f7fa; /* Light background */
+  min-height: 100vh;
+  transition: all 0.4s ease;
+}

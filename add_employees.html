@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Management System</title>
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="{% static 'ui/css/add_employees.css' %}">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="{% static 'ui/images/LOGO.jpg' %}" alt="CompanyLogo" class="logo">
+                <h2>QCB MFg. Corp.</h2>
+            </div>
+            <ul class="sidebar-links">
+                <h4>
+                    <span>Main Menu</span>
+                    <div class="menu-separator"></div>
+                  </h4>
+                  <li>
+                    <a href="{% url 'dashboard' %}">
+                      <span class="material-symbols-outlined"> dashboard </span>Dashboard</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'add_employees' %}"><span class="material-symbols-outlined"> person_add </span>Manage Employee</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'attendance' %}"><span class="material-symbols-outlined"> how_to_reg </span>Attendance</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'payroll_computations' %}"><span class="material-symbols-outlined"> calculate </span>Payroll Computations</a>
+                  </li>
+                  <h4>
+                    <span>Account</span>
+                    <div class="menu-separator"></div>
+                  </h4>
+                  <li>
+                    <a href="#"><span class="material-symbols-outlined"> person </span>User Profile</a>
+                  </li>
+                  <li>
+                    <a href="#"><span class="material-symbols-outlined"> logout </span>Logout</a>
+                  </li>
+            </ul>
+            <div class="user-account">
+                <div class="user-profile">
+                    <img src="{% static 'ui/images/profile-img.jpg' %}" alt="Profile Image">
+                    <div class="user-detail">
+                        <h3>Eva Murphy</h3>
+                        <span>Web Developer</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <div class="main-content">
+      <h1>Payroll Management System</h1>
+    
+      <div class="dashboard-header">
+        <div></div> <!-- For alignment -->
+        <h2>Employee Management</h2>
+        <label for="management-date">Date:</label>
+        <input type="date" id="management-date" />
+      </div>
+    
+      <div class="employee-table">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Designation</th>
+              <th>Category</th>
+              <th>Date Hired</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>John Doe</td>
+              <td>Manager</td>
+              <td>Full-Time</td>
+              <td>01/10/2022</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jane Smith</td>
+              <td>Developer</td>
+              <td>Part-Time</td>
+              <td>03/20/2023</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    
+      <div class="button-group">
+        <a href="{% url 'personnel_profile' %}" button class="add-btn">Add Employee</button></a>
+        <button class="remove-btn">Remove Employee</button>
+      </div>
+    </div>    
+</body>
+</html>

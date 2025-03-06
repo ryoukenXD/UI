@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+  <meta charset="UTF-8">
+  <title>Employee Attendance</title>
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="{% static 'ui/css/attendance.css' %}">
+</head>
+<body>
+  <div class="container">
+    <!-- SIDEBAR (copy same sidebar from dashboard here) -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="{% static 'ui/images/LOGO.jpg' %}" alt="CompanyLogo" class="logo">
+            <h2>QCB MFg. Corp.</h2>
+        </div>
+        <ul class="sidebar-links">
+            <h4>
+                <span>Main Menu</span>
+                <div class="menu-separator"></div>
+            </h4>
+            <li>
+                <a href="{% url 'dashboard' %}"><span class="material-symbols-outlined"> dashboard </span>Dashboard</a>
+            </li>
+            <li>
+                <a href="{% url 'add_employees' %}"><span class="material-symbols-outlined"> person_add </span>Manage Employee</a>
+            </li>
+            <li>
+                <a href="{% url 'attendance' %}"><span class="material-symbols-outlined"> how_to_reg </span>Attendance</a>
+            </li>
+            <li>
+                <a href="{% url 'payroll_computations' %}"><span class="material-symbols-outlined"> calculate </span>Payroll Computations</a>
+            </li>
+            <h4>
+              <span>Account</span>
+              <div class="menu-separator"></div>
+            </h4>
+            <li>
+              <a href="#"><span class="material-symbols-outlined"> person </span>User Profile</a>
+            </li>
+            <li>
+              <a href="#"><span class="material-symbols-outlined"> logout </span>Logout</a>
+            </li>
+        </ul>
+        <div class="user-account">
+            <div class="user-profile">
+                <img src="{% static 'ui/images/profile-img.jpg' %}" alt="Profile Image">
+                <div class="user-detail">
+                    <h3>Eva Murphy</h3>
+                    <span>Web Developer</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ATTENDANCE CONTENT -->
+      <div class="main-content">
+        <h1>Payroll Management System</h1>
+    <div class="dashboard-header">
+      <div></div> <!-- Empty to align the date right -->
+      <h2>Employee Attendance</h2>
+      <label for="attendance-date">Date:</label>
+      <input type="date" id="attendance-date" />
+    </div>
+
+    <div class="attendance-table">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Time In</th>
+            <th>Time Out</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>John Doe</td>
+            <td>03/04/2025</td>
+            <td>08:00 AM</td>
+            <td>05:00 PM</td>
+            <td>Present</td>
+          </tr>
+          <tr>
+            <td>002</td>
+            <td>Jane Smith</td>
+            <td>03/04/2025</td>
+            <td>08:15 AM</td>
+            <td>05:00 PM</td>
+            <td>Late</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  <div class="summary-cards">
+    <div class="card">
+      <h3>Total Present</h3>
+      <p>2</p>
+    </div>
+    <div class="card">
+      <h3>Total Absent</h3>
+      <p>0</p>
+    </div>
+    <div class="card">
+      <h3>Late Count</h3>
+      <p>1</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

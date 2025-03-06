@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #fefefe;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 80px;
+  display: flex;
+  overflow-x: hidden;
+  flex-direction: column;
+  background-color: rgba(76, 198, 241, 0.6); ;
+  color:#ffff;
+  padding: 25px 20px;
+  transition: all 0.4s ease;
+  position: fixed;
+  z-index: 1000;
+}
+
+.sidebar:hover {
+  width: 280px;
+  background-color:#00c3ff;
+}
+
+.sidebar .sidebar-header {
+  display: flex;
+}
+.sidebar .sidebar-header img {
+  width: 42px;
+}
+.sidebar .sidebar-header h2 {
+  color: #000000;
+  font-size: 1.25rem;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-left: 23px;
+}
+.sidebar-links h4 {
+  color: #000000;
+  font-weight: 500;
+  white-space: nowrap;
+  margin: 10px 0;
+  position: relative;
+}
+.sidebar-links h4 span {
+  opacity: 0;
+}
+.sidebar:hover .sidebar-links h4 span {
+  opacity: 1;
+}
+.sidebar-links .menu-separator {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(1);
+  transform: translateY(-50%);
+  background: #0a11e3;
+  transform-origin: right;
+  transition-delay: 0.2s;
+}
+.sidebar:hover .sidebar-links .menu-separator {
+  transition-delay: 0s;
+  transform: scaleX(0);
+}
+.sidebar-links {
+  list-style: none;
+  margin-top: 20px;
+  height: 80%;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.sidebar-links::-webkit-scrollbar {
+  display: none;
+}
+.sidebar-links li a {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+  color: #000000;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 15px 10px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+.sidebar-links li a:hover {
+  color: #000000;
+  background: #2abc02;
+  border-radius: 4px;
+  padding: 15px 15px;
+}
+
+.user-account {
+  margin-top: auto;
+  padding: 12px 10px;
+  margin-left: -10px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.user-profile img {
+  width: 42px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+}
+
+.user-profile h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.user-profile span {
+  font-size: 0.775rem;
+  font-weight: 600;
+}
+
+.user-detail {
+  margin-left: 23px;
+  white-space: nowrap;
+}
+
+.sidebar:hover .user-account {
+  background: #000000;
+  border-radius: 4px;
+}
+/* Main Content */
+.main-content {
+  margin-left: 80px;
+  padding: 20px;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  transition: all 0.4s ease;
+}
+.main-content h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+.main-content h2 {
+  margin-left: 10px;
+}
+
+/* Date picker */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: -30px;
+}
+.dashboard-header label {
+  font-weight: bold;
+  margin-left: 922.9px;
+}
+.dashboard-header input[type="date"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Attendance Table */
+.attendance-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.attendance-table th,
+.attendance-table td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+.attendance-table th {
+  background-color: #6bbecf;
+  color: white;
+  font-size: 16px;
+}
+.attendance-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Summary Cards */
+.summary-cards {
+  display: flex;
+  gap: 20px;
+}
+.card {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
